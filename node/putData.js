@@ -29,7 +29,7 @@ parsedData.data.map((item) => {
     }
     docClient.put(params, (error, data) => {
         error
-            ? console.error('Unable to add, error: ', JSON.stringify(error, null, 4))
-            : console.log('PutItem succeeded:', JSON.stringify(item, null, 4))
+            ? console.error('Unable to add. Error: ', JSON.stringify(error, null, 4))
+            : console.log('PutItem succeeded: ', JSON.stringify(item, null, 4))
     })
 })
