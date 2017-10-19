@@ -1,18 +1,18 @@
 import boto3
-import pprint
 import json
 
 with open('./config/config.json', 'r') as file:
-    data = json.loads(file.read())
+    config = json.loads(file.read())
 
-client = boto3.client(
+dynamodb = boto3.resource(
     'dynamodb',
-    aws_access_key_id=data['ID'],
-    aws_secret_access_key=data['KEY']
+    region_name           = 'us-east-2',
+    aws_access_key_id     = config['ID'],
+    aws_secret_access_key = config['KEY']
 )
 
-response = client.create_table(
-    AttributeDefinitions=[
+response = dynamodb.create_table(
+    AttributeDefinitions = [
         {
             'AttributeName': 'id',
             'AttributeType': 'N'
@@ -22,8 +22,8 @@ response = client.create_table(
             'AttributeType': 'S'
         },
     ],
-    TableName='ExampleTableTwo',
-    KeySchema=[
+    TableName = 'ExampleTableTwo',
+    KeySchema = [
         {
             'AttributeName': 'id',
             'KeyType': 'HASH'
@@ -33,11 +33,10 @@ response = client.create_table(
             'KeyType': 'RANGE'
         }
     ],
-    ProvisionedThroughput={
+    ProvisionedThroughput = {
         'ReadCapacityUnits': 1,
-        'WriteCapacityUnits': 2
+        'WriteCapacityUnits': 1
     }
 )
 
-printer = pprint.PrettyPrinter(indent=2)
-printer.pprint(response)
+print(response.table_status)

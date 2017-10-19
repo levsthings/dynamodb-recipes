@@ -3,17 +3,18 @@ import pprint
 import json
 
 with open('./config/config.json', 'r') as file:
-    data = json.loads(file.read())
+    config = json.loads(file.read())
 
-client = boto3.client(
+dynamodb = boto3.resource(
     'dynamodb',
-    aws_access_key_id=data['ID'],
-    aws_secret_access_key=data['KEY']
+    region_name           = 'us-east-2',
+    aws_access_key_id     = config['ID'],
+    aws_secret_access_key = config['KEY']
 )
 
-response = client.delete_table(
-    TableName='ExampleTableTwo'
-)
+table = dynamodb.Table('ExampleTableTwo')
+
+response = table.delete()
 
 printer = pprint.PrettyPrinter(indent=2)
 printer.pprint(response)
