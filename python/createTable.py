@@ -1,3 +1,6 @@
+"""Creating a table with the name ExampleTableTwo,
+check ./exampledata/data.json for data structure.
+"""
 import boto3
 import json
 

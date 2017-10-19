@@ -1,3 +1,4 @@
+"""Deleting the table with the name ExampleTableTwo."""
 import boto3
 import pprint
 import json

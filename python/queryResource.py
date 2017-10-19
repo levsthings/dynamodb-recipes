@@ -1,3 +1,5 @@
+"""Querying a single item based on key='id
+"""
 import boto3
 import json
 import decimal

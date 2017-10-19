@@ -1,3 +1,5 @@
+"""Loading the table with ./exampledata/data.json
+"""
 import boto3
 import pprint
 import time
