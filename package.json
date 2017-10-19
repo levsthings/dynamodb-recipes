@@ -24,9 +24,7 @@
   "devDependencies": {
     "@monolambda/eslint-config": "^1.5.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.2.1",
-    "lodash": "^4.17.4",
-    "rimraf": "^2.6.2"
+    "lint-staged": "^4.2.1"
   },
   "dependencies": {
     "aws-sdk": "^2.135.0"

@@ -9,7 +9,7 @@ const dynamoDB = new AWS.DynamoDB({
 })
 
 const tableConfig = {
-    TableName: 'Example Table',
+    TableName: 'ExampleTable',
     KeySchema: [
         {AttributeName: 'id', KeyType: 'HASH'},
         {AttributeName: 'fact', KeyType: 'RANGE'}
@@ -20,7 +20,7 @@ const tableConfig = {
     ],
     ProvisionedThroughput: {
         ReadCapacityUnits: 1,
-        WriteCapacityUnits: 3
+        WriteCapacityUnits: 2
     }
 }
 
