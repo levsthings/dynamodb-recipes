@@ -1,3 +1,6 @@
+/**
+ * Scan the count of table.
+ */
 'use strict'
 const AWS = require('aws-sdk')
 const config = require('../config/config')

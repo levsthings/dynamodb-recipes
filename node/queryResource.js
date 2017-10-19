@@ -1,3 +1,6 @@
+/**
+ * Querying a single item based on key='id
+ */
 'use strict'
 const AWS = require('aws-sdk')
 const config = require('../config/config')

@@ -1,3 +1,6 @@
+/**
+ * Deleting the table with the name ExampleTableTwo.
+ */
 'use strict'
 const AWS = require('aws-sdk')
 const config = require('../config/config')

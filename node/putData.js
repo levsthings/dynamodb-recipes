@@ -1,3 +1,6 @@
+/**
+ * Loading the table with ./exampledata/data.json
+ */
 'use strict'
 const AWS = require('aws-sdk')
 const fs = require('fs')

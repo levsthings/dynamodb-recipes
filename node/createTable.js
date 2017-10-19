@@ -1,3 +1,7 @@
+/**
+ * Creating a table with the name ExampleTableTwo,
+ * Check ./exampledata/data.json for data structure.
+ */
 'use strict'
 const AWS = require('aws-sdk')
 const config = require('../config/config')
