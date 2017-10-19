@@ -1,4 +1,5 @@
 import boto3
+import pprint
 import json
 
 with open('./config/config.json', 'r') as file:
@@ -38,4 +39,5 @@ response = client.create_table(
     }
 )
 
-print(response)
+printer = pprint.PrettyPrinter(indent=2)
+printer.pprint(response)
