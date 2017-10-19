@@ -24,7 +24,7 @@ for i in dataArray:
     dataID   = i['id']
     dataFact = i['fact']
     response = table.put_item(
-        Item={
+        Item= {
             'id'  : dataID,
             'fact': dataFact
         })
