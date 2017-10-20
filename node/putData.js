@@ -2,9 +2,9 @@
  * Loading the table with ./exampledata/data.json
  */
 'use strict'
-const AWS = require('aws-sdk')
 const fs = require('fs')
-const config = require('../config/config')
+const AWS = require('aws-sdk')
+const {config} = require('../config/config.js')
 
 AWS.config.update({
     region: 'us-east-2',

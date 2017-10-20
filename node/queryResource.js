@@ -3,7 +3,7 @@
  */
 'use strict'
 const AWS = require('aws-sdk')
-const config = require('../config/config')
+const {config} = require('../config/config')
 
 AWS.config.update({
     region: 'us-east-2',
