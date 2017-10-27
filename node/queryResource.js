@@ -23,6 +23,9 @@ const params = {
 
 docClient.query(params, (error, data) => {
     error
-        ? console.error('Unable to get item. Error:', JSON.stringify(error, null, 4))
+        ? console.error(
+            'Unable to get item. Error:',
+            JSON.stringify(error, null, 4)
+        )
         : console.log('Value: ', JSON.stringify(data, null, 4))
 })

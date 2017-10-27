@@ -24,15 +24,18 @@ try {
 
 parsedData.data.map((item) => {
     const params = {
-        'TableName': 'ExampleTable',
-        'Item': {
-            'id': item.id,
-            'fact': item.fact
+        TableName: 'ExampleTable',
+        Item: {
+            id: item.id,
+            fact: item.fact
         }
     }
     docClient.put(params, (error, data) => {
         error
-            ? console.error('Unable to add. Error: ', JSON.stringify(error, null, 4))
+            ? console.error(
+                'Unable to add. Error: ',
+                JSON.stringify(error, null, 4)
+            )
             : console.log('PutItem succeeded: ', JSON.stringify(item, null, 4))
     })
 })

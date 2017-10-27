@@ -17,6 +17,12 @@ const tableConfig = {
 
 dynamoDB.deleteTable(tableConfig, (error, data) => {
     error
-        ? console.error('Unable to create table. Error: ', JSON.stringify(error, null, 4))
-        : console.log('Deleted table. Table description: ', JSON.stringify(data, null, 4))
+        ? console.error(
+            'Unable to create table. Error: ',
+            JSON.stringify(error, null, 4)
+        )
+        : console.log(
+            'Deleted table. Table description: ',
+            JSON.stringify(data, null, 4)
+        )
 })
